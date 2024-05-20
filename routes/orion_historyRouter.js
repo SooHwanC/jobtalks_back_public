@@ -1,6 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const Orion_history = require('../schemas/orion_history');
+const Gpt_history = require('../schemas/gpt_history');
 
 router.post('/save', async (req, res, next) => {
     try {
@@ -28,7 +29,9 @@ router.post('/getAllAnswer', async (req, res, next) => {
     try {
         const { member_id } = req.body;
         const history = await Orion_history.find({ member_id });
-        return res.status(200).send(history);
+        const history_talent = await Gpt_history.find({ member_id: member_id });
+        return res.status(200).send({history, history_talent});
+        // return res.status(200).send(history);
     } catch (error) {
         console.error(error);
         next(error);
