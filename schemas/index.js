@@ -9,8 +9,6 @@ module.exports = () => {
 
         mongoose.connect(`${MONGOOSE_ID}`, {
             dbName: 'jobtalks',
-            useNewUrlParser: true,
-            useUnifiedTopology: true,
         })
             .then(() => {
                 console.log("몽고디비 연결 성공");
