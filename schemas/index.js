@@ -33,8 +33,8 @@ module.exports = () => {
 
     require('./company');
     require('./member');
-    require('./gpt_history');
-    require('./orion_history');
+    require('./talent_history');
+    require('./essay_history');
 
 
 }

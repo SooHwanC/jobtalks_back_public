@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 
 const { Schema } = mongoose;
 
-const gpt_history = new Schema({
+const talent_history = new Schema({
     member_id: {
         type: String,
         required: true,
@@ -29,4 +29,4 @@ const gpt_history = new Schema({
     },
 });
 
-module.exports = mongoose.model('Gpt_history', gpt_history);
+module.exports = mongoose.model('Talent_history', talent_history);

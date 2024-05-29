@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 
 const { Schema } = mongoose;
 
-const orion_history = new Schema({
+const essay_history = new Schema({
     member_id: {
         type: String,
         required: true,
@@ -17,4 +17,4 @@ const orion_history = new Schema({
     },
 });
 
-module.exports = mongoose.model('Orion_history', orion_history);
+module.exports = mongoose.model('Essay_history', essay_history);

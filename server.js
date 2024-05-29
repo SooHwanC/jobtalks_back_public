@@ -13,8 +13,8 @@ app.use(express.urlencoded({ extended: false }));
 
 app.use('/company', require('./routes/companyRouter'));
 app.use('/member', require('./routes/memberRouter'));
-app.use('/gpt_history', require('./routes/gpt_historyRouter'));
-app.use('/orion_history', require('./routes/orion_historyRouter'));
+app.use('/talent_history', require('./routes/talent_historyRouter'));
+app.use('/essay_history', require('./routes/essay_historyRouter'));
 app.use('/kakao', require('./routes/kakaoRouter'));
 app.use('/google', require('./routes/googleRouter'));
 
